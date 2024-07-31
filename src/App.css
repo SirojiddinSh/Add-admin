@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ant-menu-item:has(.active) {
+    background-color: dodgerblue;
+    color: white;
+}
