@@ -6,13 +6,12 @@ import {
 import { addToAdmins } from "../../redux/slices/adminSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-const Products = () => {
+const Users = () => {
     const dispatch = useDispatch();
     const { data, isLoading } = useGetWorkersQuery();
     const [deleteUser] = useDeleteUserMutation();
     const admins = useSelector((state) => state.admin.admins);
     const search = useSelector((state) => state.admin.search);
-    console.log(search);
 
     const handleAddToAdmins = (user) => {
         user.added = true;
@@ -95,4 +94,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default Users;
